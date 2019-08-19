@@ -1,3 +1,4 @@
 /node_modules
 .DS*
 /**/.DS*
+yarn-error.log
