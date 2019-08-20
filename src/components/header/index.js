@@ -5,10 +5,12 @@ class Header extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-6 offset-4">
+          <div className="col-md-12 offset-2">
             <div className="page-header">
               <h1>
-                Contact List <span className="badge badge-pill badge-success">{this.props.noContacts}</span>
+                People <span className="badge badge-pill badge-success ">{this.props.noPersons}</span>
+                Places <span className="badge badge-pill badge-success ">{this.props.noPlaces}</span>
+                Things <span className="badge badge-pill badge-success ">{this.props.noThings}</span>
               </h1>
             </div>
           </div>
