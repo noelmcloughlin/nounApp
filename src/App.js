@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/header/";
+import NounList from "./components/nounList/";
+import FilterControls from "./components/filterControls/";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        const sample = {
+            name: { first: "Joe", last: "Bloggs" },
+            email: "j.bloggs@example.com",
+            phone: "012-3456789",
+            picture: { thumbnail: "./profile.png" }
+        };
+
+        const nouns = [sample, sample, sample, sample, sample];
+
+        return (
+            <div className="jumbotron">
+                <Header noNouns={10} />
+                <FilterControls />
+                <NounList nouns={nouns} />
+            </div>
+        );
+    }
 }
 
 export default App;

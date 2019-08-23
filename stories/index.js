@@ -8,6 +8,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Header from '../src/components/header/'
 import FilterControls from '../src/components/filterControls/'
 import Noun from '../src/components/noun/'
+import NounList from '../src/components/nounList/'
 
 storiesOf("Noun App/Header", module).add("default", () => (
   <Header noPersons={10} noPlaces={10} noThings={10} />
@@ -28,4 +29,7 @@ storiesOf("Noun App/Noun", module).add("default", () => (
   <Noun noun={sample}/>
 ));
 
-
+storiesOf("Noun App/Noun List", module).add("default", () => {
+  const samples = [sample, sample, sample, sample, sample];
+  return <NounList nouns={samples}/>
+});
